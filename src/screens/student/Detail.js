@@ -118,7 +118,7 @@ const studentHome = props => {
                 style={[
                   styles.submit,
                   styles.bgGreen,
-                  {marginTop: 20, width: 'auto', alignSelf: 'center'},
+                  {marginTop: 20, width: 100, alignSelf: 'center'},
                 ]}>
                 <Text style={{color: '#fff', textAlign:'center'}}>Edit Profile</Text>
               </View>
@@ -129,7 +129,7 @@ const studentHome = props => {
               style={[
                 styles.submit,
                 styles.bgPurle,
-                {marginTop: 20, width: 'auto', alignSelf: 'center'},
+                {marginTop: 0, width: 100, alignSelf: 'center'},
               ]}>
               <Text style={{color: '#fff', textAlign:'center'}}>Logout</Text>
             </View>
@@ -139,7 +139,7 @@ const studentHome = props => {
         <View style={styles.bottomView}>
           <TouchableOpacity
             style={{
-              width: '35%',
+              width: '40%',
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-home')}>
@@ -148,8 +148,16 @@ const studentHome = props => {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
+            style={[styles.btnCircle, styles.bgGreen, styles.shadow]}>
+            <View style={styles.circleIcon}>
+              <Text style={{color:'#fff'}}>
+                +
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
             style={{
-              width: '30%',
+              width: '20%',
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-test')}>
@@ -159,7 +167,7 @@ const studentHome = props => {
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              width: '35%',
+              width: '40%',
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-detail')}>

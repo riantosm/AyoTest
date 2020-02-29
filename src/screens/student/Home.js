@@ -180,7 +180,7 @@ const studentHome = props => {
         <View style={styles.bottomView}>
           <TouchableOpacity
             style={{
-              width: '35%',
+              width: '40%',
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-home')}>
@@ -189,8 +189,16 @@ const studentHome = props => {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
+            style={[styles.btnCircle, styles.bgGreen, styles.shadow]}>
+            <View style={styles.circleIcon}>
+              <Text style={{color:'#fff'}}>
+                +
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
             style={{
-              width: '30%',
+              width: '20%',
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-test')}>
@@ -200,7 +208,7 @@ const studentHome = props => {
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              width: '35%',
+              width: '40%',
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-detail')}>
