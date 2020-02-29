@@ -12,6 +12,7 @@ import {
 import font from '../Fonts';
 import styles from './Style';
 import {TextInput} from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const studentHome = props => {
   const [code, inputCode] = useState('');
@@ -148,7 +149,7 @@ const studentHome = props => {
               }}>
               <Text style={{width: '10%'}}>2</Text>
               <Text style={{width: '70%'}}>Agama</Text>
-              <Text style={{width: '20%', textAlign: 'center'}}>80</Text>
+              <Text style={{width: '20%', textAlign: 'center'}}></Text>
             </View>
             <View
               style={{
@@ -185,14 +186,16 @@ const studentHome = props => {
             }}
             onPress={() => props.navigation.navigate('student-home')}>
             <View>
-              <Text style={styles.textStyle}>icon</Text>
+              <Text style={styles.textStyle}>
+                <Icon name="award" size={25} style={styles.textGreen} />
+              </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.btnCircle, styles.bgGreen, styles.shadow]}>
             <View style={styles.circleIcon}>
-              <Text style={{color:'#fff'}}>
-                +
+              <Text style={{color: '#fff'}}>
+                <Icon name="plus" size={30} style={styles.textWhite} />
               </Text>
             </View>
           </TouchableOpacity>
@@ -202,9 +205,7 @@ const studentHome = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-test')}>
-            <View>
-              <Text style={[styles.textStyle, {}]}>icon</Text>
-            </View>
+              {/* hanya sepasi */}
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -213,7 +214,9 @@ const studentHome = props => {
             }}
             onPress={() => props.navigation.navigate('student-detail')}>
             <View>
-              <Text style={styles.textStyle}>icon</Text>
+              <Text style={styles.textStyle}>
+                <Icon name="child" size={25} style={styles.textGreen} />
+              </Text>
             </View>
           </TouchableOpacity>
         </View>

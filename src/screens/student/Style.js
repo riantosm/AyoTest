@@ -25,26 +25,35 @@ export default {
     bottom: 0,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    // borderTopColor: '#985bff',
-    // borderTopWidth: 2,
   },
-  btnCircle:{
+  bottomViewSm: {
+    width: '100%',
+    height: 'auto',
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  btnCircle: {
     position: 'absolute',
     backgroundColor: 'green',
     height: 60,
     width: 60,
-    borderRadius:100,
+    borderRadius: 100,
     alignSelf: 'center',
     flex: 1,
     alignItems: 'stretch',
     justifyContent: 'center',
   },
-  circleIcon:{
-    flexGrow:1,
-    height:null,
-    width:null,
+  circleIcon: {
+    flexGrow: 1,
+    height: null,
+    width: null,
     alignItems: 'center',
-    justifyContent:'center',
+    justifyContent: 'center',
   },
   textStyle: {
     textAlign: 'center',
@@ -60,8 +69,14 @@ export default {
   bgBlack: {
     backgroundColor: '#060709',
   },
+  bgWhite: {
+    backgroundColor: '#fff',
+  },
   textGreen: {
     color: '#0FB63F',
+  },
+  textWhite: {
+    color: '#fff',
   },
   textPurle: {
     color: '#985bff',
@@ -86,6 +101,19 @@ export default {
     backgroundColor: '#fff',
     borderRadius: 5,
   },
+  boxWrappSm: {
+    borderRadius: 5,
+    width: '20%',
+    alignItems: 'center',
+    padding: 5,
+  },
+  boxWrappSmQu: {
+    padding: 15,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    width:'100%',
+    alignItems: 'center',
+  },
   box: {
     marginBottom: 20,
     padding: 20,
@@ -102,7 +130,7 @@ export default {
     borderColor: 'transparent',
     borderBottomColor: 'gray',
     width: '100%',
-    paddingHorizontal:20
+    paddingHorizontal: 20,
   },
   shadow: {
     elevation: 5,
@@ -114,10 +142,10 @@ export default {
     shadowOpacity: 0.58,
     shadowRadius: 16.0,
   },
-  profileImage:{
-    width:100,
+  profileImage: {
+    width: 100,
     height: 100,
     borderRadius: 100,
-    alignSelf:'center'
+    alignSelf: 'center',
   },
 };

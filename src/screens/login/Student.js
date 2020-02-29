@@ -68,57 +68,6 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      // <SafeAreaView style={styles.container}>
-      //   <StatusBar backgroundColor="#060709" translucent={true} />
-      //   <View style={styles.logoCon}>
-      //     {/* <Image
-      //       source={require('../images/bar-logo.png')}
-      //       style={styles.logo}
-      //     /> */}
-      //     <Text style={[font.Aquawax, {fontSize: 65, color: '#060709'}]}>
-      //       ayo<Text style={{color: '#0FB63F'}}>test</Text>.
-      //     </Text>
-      //     <Text style={[font.Metropolis, {color: '#060709'}]}>
-      //       Login for student.
-      //     </Text>
-      //   </View>
-      //   <View style={styles.textCon}>
-      //     <View style={styles.warning}>{this.state.warning}</View>
-      //     <TextInput placeholder="Password"></TextInput>
-      //     <TextInput
-      //       style={styles.inputText}
-      //       secureTextEntry={true}
-      //       placeholder="Password"
-      //       placeholderTextColor="rgba(0,0,0,.5)"
-      //       onChange={e => this.setState({password: e.nativeEvent.text})}
-      //     />
-      //     <TouchableOpacity style={{width: '100%'}}>
-      //       <Text
-      //         style={styles.loginButton}
-      //         onPress={() =>
-      //           this.props.navigation.navigate('navigator-student')
-      //         }>
-      //         Login
-      //       </Text>
-      //     </TouchableOpacity>
-      //     <ActivityIndicator
-      //       style={this.state.loading ? styles.loadingOn : styles.loading}
-      //       color="#ff5722"
-      //       size="large"
-      //     />
-      //   </View>
-
-      //   <View style={styles.footer}>
-      //     <Text style={styles.footerText}>Are you a teacher?</Text>
-      //     <TouchableOpacity>
-      //       <Text
-      //         style={styles.registerButton}
-      //         onPress={() => this.props.navigation.navigate('login-teacher')}>
-      //         Login here
-      //       </Text>
-      //     </TouchableOpacity>
-      //   </View>
-      // </SafeAreaView>
       <ScrollView style={{backgroundColor: '#CBDBEC'}}>
         <StatusBar backgroundColor="#060709" translucent={true} />
         <KeyboardAvoidingView behavior="padding" style={styless.container}>

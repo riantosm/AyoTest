@@ -12,6 +12,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {StackActions} from '@react-navigation/native';
 import {assessment} from '../../redux/actions/assessment';
 import {connect} from 'react-redux';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import font from '../Fonts';
 import styles from './Style';
@@ -29,7 +30,7 @@ const StudentTest = props => {
               style={[
                 font.Aquawax,
                 {
-                  fontSize: 40,
+                  fontSize: 45,
                   padding: 20,
                   paddingBottom: 10,
                   textAlign: 'center',
@@ -67,6 +68,7 @@ const StudentTest = props => {
         </ScrollView>
 
         
+        
         <View style={styles.bottomView}>
           <TouchableOpacity
             style={{
@@ -75,14 +77,16 @@ const StudentTest = props => {
             }}
             onPress={() => props.navigation.navigate('student-home')}>
             <View>
-              <Text style={styles.textStyle}>icon</Text>
+              <Text style={styles.textStyle}>
+                <Icon name="award" size={25} style={styles.textGreen} />
+              </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.btnCircle, styles.bgGreen, styles.shadow]}>
             <View style={styles.circleIcon}>
-              <Text style={{color:'#fff'}}>
-                +
+              <Text style={{color: '#fff'}}>
+                <Icon name="plus" size={30} style={styles.textWhite} />
               </Text>
             </View>
           </TouchableOpacity>
@@ -92,9 +96,7 @@ const StudentTest = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-test')}>
-            <View>
-              <Text style={[styles.textStyle, {}]}>icon</Text>
-            </View>
+              {/* hanya sepasi */}
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -103,7 +105,9 @@ const StudentTest = props => {
             }}
             onPress={() => props.navigation.navigate('student-detail')}>
             <View>
-              <Text style={styles.textStyle}>icon</Text>
+              <Text style={styles.textStyle}>
+                <Icon name="child" size={25} style={styles.textGreen} />
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -147,7 +151,7 @@ const StudentTest = props => {
           <TouchableOpacity
             onPress={() => {
               modal(false);
-              props.navigation.navigate('student-test-nya');
+              props.navigation.navigate('student-test-screen');
               // AsyncStorage.setItem('code', code);
               // props.dispatch(assessment());
               // props.navigation.dispatch(

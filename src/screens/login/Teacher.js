@@ -77,7 +77,7 @@ export default class Login extends React.Component {
                 <Text style={[font.Aquawax, {fontSize: 65, color: '#060709'}]}>
                   ayo<Text style={{color: '#CBDBEC'}}>test</Text>.
                 </Text>
-                <Text style={[font.Metropolis, {color: '#060709'}]}>
+                <Text style={[font.Questriasl, {color: '#060709'}]}>
                   Login for teacher.
                 </Text>
               </View>
