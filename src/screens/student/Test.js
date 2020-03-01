@@ -19,7 +19,7 @@ import styles from './Style';
 import {TextInput} from 'react-native-gesture-handler';
 
 const StudentTest = props => {
-  const [modalDelete, modal] = useState(false);
+  const [modalConfirm, modal] = useState(false);
   const [code, inputCode] = useState('');
   return (
     <KeyboardAvoidingView style={styles.containerView}>
@@ -52,7 +52,8 @@ const StudentTest = props => {
             {/* <Text style={{fontWeight: '700'}}>Kode : </Text> */}
             <TextInput
               placeholder="kode"
-              style={[styles.inputText, {textAlign: 'center'}]}
+              placeholderTextColor="#CBDBEC"
+              style={[styles.inputText, styles.bgGreen, styles.textWhite, {textAlign: 'center'}]}
             />
             <TouchableOpacity onPress={() => modal(true)}>
               <View
@@ -116,16 +117,21 @@ const StudentTest = props => {
       <Modal
         animationType="slide"
         transparent={false}
-        visible={modalDelete}
+        visible={modalConfirm}
         onRequestClose={() => {
           Alert.alert('Modal has been closed.');
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
+          {/*  */}
           <ScrollView style={{height: '85%'}}>
             <View>
               <View>
                 <Text style={{textAlign: 'center', fontSize: 18}}>
-                  <Text style={{}}>Kode : </Text>
+                  <Text style={{}}>Nama Matakuliah : </Text>
+                  <Text style={[styles.textGreen, {fontWeight: 'bold'}]}>
+                    Matematika Dasar
+                  </Text>
+                  <Text style={{}}>{'\n'}Kode : </Text>
                   <Text style={[styles.textGreen, {fontWeight: 'bold'}]}>
                     1425-MATDAS
                   </Text>
@@ -152,11 +158,6 @@ const StudentTest = props => {
             onPress={() => {
               modal(false);
               props.navigation.navigate('student-test-screen');
-              // AsyncStorage.setItem('code', code);
-              // props.dispatch(assessment());
-              // props.navigation.dispatch(
-              //   StackActions.replace('student-test-nya', {code: code}),
-              // );
             }}>
             <View style={[styles.boxSm, styles.bgGreen, styles.shadow]}>
               <Text
@@ -173,6 +174,7 @@ const StudentTest = props => {
               </Text>
             </View>
           </TouchableOpacity>
+          {/*  */}
           <TouchableOpacity onPress={() => modal(false)}>
             <View
               style={[
