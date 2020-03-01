@@ -64,23 +64,21 @@ class TestList extends React.Component {
 
     return (
       <View>
-        <Text>
-          THIS IS STUDENT {this.state.data[0]} SCREEN {'code'}
-        </Text>
+        <Text>THIS IS STUDENT {this.state.data[0]} SCREEN</Text>
         <FlatList
           data={this.props.assessment.assessmentRandom}
           renderItem={this.renderItem.bind(this)}
           keyExtractor={(item, index) => index.toString()}
         />
-        <QuestionDetail
+        {/* <QuestionDetail
           show={this.state.show}
           question={this.state.question}
           index={this.state.index}
           close={this.showModal}
-        />
+        /> */}
         <Button
           title="Finish"
-          onPress={() => this.props.navigation.navigate('student-finish')}
+          onPress={() => this.props.navigation.navigate('question-result')}
         />
         <Button
           title="Check"

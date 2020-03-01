@@ -11,18 +11,63 @@ export const assessment = url => {
   return {
     type: 'GET_ASSESSMENT',
     payload: [
-      'siapa dia?',
-      'siapa kamu?',
-      'siapa kita?',
-      'siapakah?',
-      'siapapun',
+      {
+        question: 'Question 1?',
+        answer: [
+          {label: 'This is A', value: 1},
+          {label: 'This is B', value: 2},
+          {label: 'This is C', value: 3},
+          {label: 'This is D', value: 4},
+          {label: 'This is E', value: 5},
+        ],
+      },
+      {
+        question: 'Question 2?',
+        answer: [
+          {label: 'This is A', value: 1},
+          {label: 'This is B', value: 2},
+          {label: 'This is C', value: 3},
+          {label: 'This is D', value: 4},
+          {label: 'This is E', value: 5},
+        ],
+      },
+      {
+        question: 'Question 3?',
+        answer: [
+          {label: 'This is A', value: 1},
+          {label: 'This is B', value: 2},
+          {label: 'This is C', value: 3},
+          {label: 'This is D', value: 4},
+          {label: 'This is E', value: 5},
+        ],
+      },
+      {
+        question: 'Question 4?',
+        answer: [
+          {label: 'This is A', value: 1},
+          {label: 'This is B', value: 2},
+          {label: 'This is C', value: 3},
+          {label: 'This is D', value: 4},
+          {label: 'This is E', value: 5},
+        ],
+      },
+      {
+        question: 'Question 5?',
+        answer: [
+          {label: 'This is A', value: 1},
+          {label: 'This is B', value: 2},
+          {label: 'This is C', value: 3},
+          {label: 'This is D', value: 4},
+          {label: 'This is E', value: 5},
+        ],
+      },
     ],
-    // [
-    //   'siapa kamu?',
-    //   'siapa saya?',
-    //   'dimana kita?',
-    //   'kapan nikah?',
-    //   'apa itu?',
-    // ],
+  };
+};
+
+export const saveAnswer = data => {
+  return {
+    type: 'SAVE_ANSWER',
+    payload: data,
   };
 };

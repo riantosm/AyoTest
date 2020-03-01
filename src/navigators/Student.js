@@ -5,7 +5,7 @@ import StudentTest from '../screens/student/Test';
 import StudentTestScreen from '../screens/student/TestScreen';
 import StudentTestNya from './Test';
 import StudentDetail from '../screens/student/Detail';
-import StudentFinish from '../screens/student/Finish';
+import StudentFinish from '../screens/student/FinishScreen';
 import StudentAdd from '../screens/student/Add';
 import StudentStatistic from '../screens/student/Statistic';
 // import LoginTeacher from '../screens/login/Teacher';
