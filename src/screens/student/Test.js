@@ -120,7 +120,7 @@ const StudentTest = props => {
         onRequestClose={() => {
           Alert.alert('Modal has been closed.');
         }}>
-        <View style={styles.wrapp}>
+        <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
             <View>
               <View>

@@ -148,4 +148,12 @@ export default {
     borderRadius: 100,
     alignSelf: 'center',
   },
+  inputText: {
+    borderRadius: 5,
+    backgroundColor: 'rgba(255,255,255,1)',
+    width: '100%',
+    marginVertical: 10,
+    paddingHorizontal: 20,
+    fontSize: 16,
+  },
 };

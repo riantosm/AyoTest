@@ -14,80 +14,21 @@ import font from '../Fonts';
 import styles from './Style';
 import {TextInput} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import RadioForm, {
+  RadioButton,
+  RadioButtonInput,
+  RadioButtonLabel,
+} from 'react-native-simple-radio-button';
 
+const radio_props = [
+  {label: 'Laki - laki', value: 0},
+  {label: 'Perempuan', value: 1},
+];
 const studentHome = props => {
+  const [modalDelete, modal] = useState(false);
+  const [answer, setAnswer] = useState(null);
   return (
     <KeyboardAvoidingView style={styles.containerView}>
-      {/* <ScrollView style={{height: '100%'}}>
-        <View style={[styles.boxWrapp, styles.shadow]}>
-          <View style={[styles.box, styles.bgGreen, styles.shadow]}>
-            <Text
-              style={[
-                font.Aquawax,
-                {
-                  color: '#060709',
-                  textAlign: 'center',
-                  textAlignVertical: 'center',
-                  fontSize: 20,
-                },
-              ]}>
-              Input Code
-            </Text>
-            <TextInput
-              placeholder="ex: 42315"
-              style={[styles.inputText, {marginTop: 10}]}></TextInput>
-            <TouchableOpacity onPress={() => modal(true)}>
-              <View
-                style={[
-                  styles.submit,
-                  styles.shadow,
-                  styles.bgBlack,
-                  {marginTop: 20},
-                ]}>
-                <Text style={[font.Aquawax, {color: '#00f28e'}]}>Submit</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('student-statistic')}>
-            <View style={[styles.box, styles.shadow, styles.bgPurle]}>
-              <Text
-                style={[
-                  font.Aquawax,
-                  {
-                    color: '#fff',
-                    textAlign: 'center',
-                    textAlignVertical: 'center',
-                    fontSize: 20,
-                  },
-                ]}>
-                Score Terakhir
-              </Text>
-              <Text style={{fontSize: 60, marginTop: 25, color: '#fff'}}>
-                87
-              </Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('login-student')}
-            style={{marginTop: 130}}>
-            <View style={[styles.boxSm, styles.bgBlack, styles.shadow]}>
-              <Text
-                style={[
-                  font.Aquawax,
-                  {
-                    color: '#fff',
-                    textAlign: 'center',
-                    textAlignVertical: 'center',
-                    fontSize: 14,
-                  },
-                ]}>
-                Logout
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-      </ScrollView> */}
       <View style={[styles.MainContainer]}>
         <ScrollView style={{width: '100%'}}>
           <View>
@@ -112,32 +53,69 @@ const studentHome = props => {
               style={styles.profileImage}
               source={require('../../../assets/img/profile.jpg')}
             />
-            <Text style={{textAlign: 'center', marginTop:20}}>Rian Tosm</Text>
+            <Text style={{textAlign: 'center', marginTop: 20}}>Rian Tosm</Text>
             <Text style={{textAlign: 'center'}}>rian.tosm@gmail.com</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => modal(true)}>
               <View
                 style={[
                   styles.submit,
                   styles.bgGreen,
-                  {marginTop: 20, width: 100, alignSelf: 'center'},
+                  styles.shadow,
+                  {marginTop: 20, width: '100%', alignSelf: 'center'},
                 ]}>
-                <Text style={{color: '#fff', textAlign:'center'}}>Edit Profile</Text>
+                <Text style={{color: '#fff', textAlign: 'center'}}>
+                  Edit Profile
+                </Text>
               </View>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={() => props.navigation.navigate('login-student')}>
+          <View style={{padding: 20}}>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('login-student')}>
+              <View
+                style={[
+                  styles.submit,
+                  styles.bgPurle,
+                  styles.shadow,
+                  {marginTop: 0, width: '100%', alignSelf: 'center'},
+                ]}>
+                <Text style={{color: '#fff', textAlign: 'center'}}>Logout</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+          {/* <TouchableOpacity>
             <View
               style={[
                 styles.submit,
-                styles.bgPurle,
-                {marginTop: 0, width: 100, alignSelf: 'center'},
+                styles.bgWhite,
+                {
+                  marginVertical: 100,
+                  width: 200,
+                  height: 200,
+                  alignSelf: 'center',
+                  borderRadius: 20,
+                  flex: 1,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                },
               ]}>
-              <Text style={{color: '#fff', textAlign:'center'}}>Logout</Text>
+              <Text
+                style={[
+                  {
+                    color: 'red',
+                    lineHeight: 90,
+                    textAlign: 'center',
+                    fontSize: 90,
+                  },
+                  font.Aquawax,
+                ]}>
+                <Text style={styles.textGreen}>ayo</Text>{' '}
+                <Text style={styles.textPurle}>Test</Text>
+              </Text>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </ScrollView>
 
-        
         <View style={styles.bottomView}>
           <TouchableOpacity
             style={{
@@ -165,7 +143,7 @@ const studentHome = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-test')}>
-              {/* hanya sepasi */}
+            {/* hanya sepasi */}
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -181,6 +159,86 @@ const studentHome = props => {
           </TouchableOpacity>
         </View>
       </View>
+      <Modal
+        animationType="slide"
+        transparent={false}
+        visible={modalDelete}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+        }}>
+        <View style={[styles.wrapp, styles.containerView]}>
+          <ScrollView style={{height: '85%'}}>
+            <TouchableOpacity style={{margin:20}}>
+              <Image
+                style={styles.profileImage}
+                source={require('../../../assets/img/profile.jpg')}
+              />
+            </TouchableOpacity>
+            <Text style={{fontSize: 18}}>Nama Lengkap</Text>
+            <TextInput
+              style={[styles.inputText]}
+              placeholder="Masukan nama lengkap"
+            />
+            <Text style={{fontSize: 18}}>Email</Text>
+            <TextInput style={[styles.inputText]} placeholder="Masukan email" />
+            <Text style={{fontSize: 18}}>Alamat</Text>
+            <TextInput
+              style={[styles.inputText]}
+              placeholder="Masukan alamat"
+            />
+            <Text style={{fontSize: 18, paddingBottom:20}}>Jenis Kelamin</Text>
+              <RadioForm
+                radio_props={radio_props}
+                initial={0}
+                onPress={value => setAnswer(value)} 
+                buttonColor={'#0FB63F'}
+                borderColor={'#0FB63F'}
+                innerColor={'#0FB63F'}
+              />
+          </ScrollView>
+          <TouchableOpacity
+            onPress={() => {
+              modal(false);
+            }}>
+            <View style={[styles.boxSm, styles.bgGreen, styles.shadow, {marginTop:20}]}>
+              <Text
+                style={[
+                  font.Aquawax,
+                  {
+                    color: '#fff',
+                    textAlign: 'center',
+                    textAlignVertical: 'center',
+                    fontSize: 14,
+                  },
+                ]}>
+                Simpan
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => modal(false)}>
+            <View
+              style={[
+                styles.boxSm,
+                styles.bgPurle,
+                styles.shadow,
+                {marginTop: 20},
+              ]}>
+              <Text
+                style={[
+                  font.Aquawax,
+                  {
+                    color: '#fff',
+                    textAlign: 'center',
+                    textAlignVertical: 'center',
+                    fontSize: 14,
+                  },
+                ]}>
+                Kembali
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </Modal>
     </KeyboardAvoidingView>
   );
 };
