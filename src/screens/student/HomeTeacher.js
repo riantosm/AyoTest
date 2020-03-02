@@ -186,6 +186,11 @@ const teacherHome = props => {
               <Text style={{width: '50%', fontWeight: '700'}}>
                 Bahasa indonesia dasar
               </Text>
+              <Text style={{width: '40%', paddingTop: 10}}>Status </Text>
+              <Text style={{width: '10%', paddingTop: 10}}>:</Text>
+              <Text style={{width: '50%', paddingTop: 10, fontWeight: '700'}}>
+                Tidak aktif
+              </Text>
               <Text style={{width: '40%', paddingTop: 10}}>Jumlah Soal </Text>
               <Text style={{width: '10%', paddingTop: 10}}>:</Text>
               <Text style={{width: '50%', paddingTop: 10, fontWeight: '700'}}>
@@ -231,6 +236,64 @@ const teacherHome = props => {
                   </Text>
                 </View>
               </TouchableOpacity>
+            </View>
+            <View
+              style={[
+                styles.boxWrapp,
+                styles.shadow,
+                {margin: 0, flexDirection: 'row', flexWrap: 'wrap'},
+              ]}>
+              <Text style={{width: '40%'}}>Status </Text>
+              <Text style={{width: '10%'}}>:</Text>
+              <Text style={{width: '50%', fontWeight: '700'}}>
+                Tidak Aktif
+              </Text>
+              <TouchableOpacity
+                style={{width: '100%'}}>
+                <View
+                  style={[
+                    styles.boxSm,
+                    styles.bgBlack,
+                    styles.shadow,
+                    {marginTop: 20, width: '100%'},
+                  ]}>
+                  <Text
+                    style={[
+                      font.Aquawax,
+                      {
+                        color: '#fff',
+                        textAlign: 'center',
+                        textAlignVertical: 'center',
+                        fontSize: 14,
+                      },
+                    ]}>
+                    Aktifkan Soal
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              {/* <TouchableOpacity
+                style={{width: '100%'}}>
+                <View
+                  style={[
+                    styles.boxSm,
+                    styles.bgWhite,
+                    styles.shadow,
+                    {marginTop: 20, width: '100%'},
+                  ]}>
+                  <Text
+                    style={[
+                      font.Aquawax,
+                      {
+                        color: '#000',
+                        textAlign: 'center',
+                        textAlignVertical: 'center',
+                        fontSize: 14,
+                      },
+                    ]}>
+                    Non-Aktifkan Soal
+                  </Text>
+                </View>
+              </TouchableOpacity> */}
             </View>
           </ScrollView>
           <View
