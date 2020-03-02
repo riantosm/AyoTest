@@ -37,7 +37,7 @@ const studentHome = props => {
                 font.Aquawax,
                 {fontSize: 40, padding: 20, paddingBottom: 10},
               ]}>
-              Profile <Text style={styles.textGreen}>Rian</Text>.
+              Profile <Text style={styles.textGreen}>User</Text>.
             </Text>
             <View
               style={{
@@ -181,6 +181,8 @@ const studentHome = props => {
             />
             <Text style={{fontSize: 18}}>Email</Text>
             <TextInput style={[styles.inputText]} placeholder="Masukan email" />
+            <Text style={{fontSize: 18}}>Nomor Hp</Text>
+            <TextInput style={[styles.inputText]} placeholder="Masukan nomor hp" />
             <Text style={{fontSize: 18}}>Alamat</Text>
             <TextInput
               style={[styles.inputText]}

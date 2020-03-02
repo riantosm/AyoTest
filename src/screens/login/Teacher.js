@@ -95,7 +95,12 @@ export default class Login extends React.Component {
                 onChange={e => this.setState({password: e.nativeEvent.text})}
               />
 
-              <TouchableOpacity onPress={() => this._handleLogin()}>
+              <TouchableOpacity
+                onPress={() =>
+                  this.props.navigation.dispatch(
+                    StackActions.replace('navigator-teacher'),
+                  )
+                }>
                 <View style={[styless.loginButton]}>
                   <Text
                     style={{color: '#fff', textAlign: 'center', padding: 13}}>

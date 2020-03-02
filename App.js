@@ -8,7 +8,7 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet, Text, Image, View} from 'react-native';
+import {StyleSheet, Text, Image, View,StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 // import Login from './src/screens/Login';
@@ -56,6 +56,7 @@ class AppWithRedux extends React.Component {
   render() {
     return (
       <NavigationContainer>
+      <StatusBar backgroundColor="rgba(0,0,0, .5)" translucent={true} style={{position:'absolute'}} />
         {this.state.complete ? (
           <Stack.Navigator
             initialRouteName="login-student"

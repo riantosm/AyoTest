@@ -176,6 +176,18 @@ const studentHome = props => {
               <Text style={{width: '20%', textAlign: 'center'}}>80</Text>
             </View>
           </View>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('teacher-home')}>
+              <View
+                style={[
+                  styles.submit,
+                  styles.bgPurle,
+                  styles.shadow,
+                  {marginTop: 0, width: '100%', alignSelf: 'center'},
+                ]}>
+                <Text style={{color: '#fff', textAlign: 'center'}}>Teacher</Text>
+              </View>
+            </TouchableOpacity>
         </ScrollView>
 
         <View style={styles.bottomView}>
