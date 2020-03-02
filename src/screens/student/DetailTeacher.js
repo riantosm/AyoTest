@@ -115,7 +115,6 @@ const teacherDetail = props => {
             </View>
           </TouchableOpacity> */}
         </ScrollView>
-
         <View style={styles.bottomView}>
           {/* list murid */}
           <TouchableOpacity
@@ -123,7 +122,7 @@ const teacherDetail = props => {
               width: '40%',
               height: '100%',
             }}
-            onPress={() => props.navigation.navigate('teacher-home')}>
+            onPress={() => props.navigation.navigate('teacher-live')}>
             <View>
               <Text style={styles.textStyle}>
                 <Icon name="street-view" size={23} style={styles.textBlack} />

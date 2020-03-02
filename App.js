@@ -26,6 +26,7 @@ import NavigatorTeacher from './src/navigators/Teacher';
 // import Index from './src/screens/Index';
 import font from './src/screens/Fonts';
 import RegisterStudent from './src/screens/login/RegisterStudent';
+import RegisterTeacher from './src/screens/login/RegisterTeacher';
 
 const Stack = createStackNavigator();
 
@@ -71,6 +72,7 @@ class AppWithRedux extends React.Component {
             headerMode="none">
             <Stack.Screen name="login-student" component={LoginStudent} />
             <Stack.Screen name="register-student" component={RegisterStudent} />
+            <Stack.Screen name="register-teacher" component={RegisterTeacher} />
 
             <Stack.Screen name="login-teacher" component={LoginTeacher} />
             <Stack.Screen

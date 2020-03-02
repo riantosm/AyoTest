@@ -11,6 +11,7 @@ import StudentStatistic from '../screens/student/Statistic';
 
 import TeacherHome from '../screens/student/HomeTeacher';
 import TeacherDetail from '../screens/student/DetailTeacher';
+import teacherLive from '../screens/student/LiveTeacher';
 // import LoginTeacher from '../screens/login/Teacher';
 
 const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ const LoginNavigator = () => {
     <Stack.Navigator initialRouteName="student-home" headerMode="none">
       <Stack.Screen name="teacher-home" component={TeacherHome} />
       <Stack.Screen name="teacher-detail" component={TeacherDetail} />
+      <Stack.Screen name="teacher-live" component={teacherLive} />
 
       <Stack.Screen name="student-home" component={StudentHome} />
       <Stack.Screen name="student-test" component={StudentTest} />

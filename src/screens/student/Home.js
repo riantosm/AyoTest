@@ -29,7 +29,7 @@ const studentHome = props => {
             <Text
               style={[
                 font.Aquawax,
-                {fontSize: 40, padding: 20, paddingTop: 40, paddingBottom: 10},
+                {fontSize: 40, padding: 20, paddingTop: 60, paddingBottom: 10},
               ]}>
               Daftar <Text style={styles.textGreen}>Nilai</Text>.
             </Text>
@@ -150,9 +150,9 @@ const studentHome = props => {
                 styles.submit,
                 styles.bgPurle,
                 styles.shadow,
-                {marginTop: 0, width: '100%', alignSelf: 'center'},
+                {width: 100, alignSelf: 'center'},
               ]}>
-              <Text style={{color: '#fff', textAlign: 'center'}}>Teacher</Text>
+              <Text style={{color: '#fff', textAlign: 'center'}}>Teacher home</Text>
             </View>
           </TouchableOpacity>
         </ScrollView>

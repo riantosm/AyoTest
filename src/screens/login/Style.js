@@ -94,4 +94,14 @@ export default {
     bottom: 50,
     opacity: 1,
   },
+  iconP:{
+    borderWidth: 5,
+    alignItems:'center',
+    borderColor: '#333333',
+    width:200,
+    height:200,
+    borderRadius:20,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 };

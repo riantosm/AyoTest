@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Modal,
   StatusBar,
-  Alert
+  Alert,
 } from 'react-native';
 
 import font from '../Fonts';
@@ -35,7 +35,12 @@ const teacherHome = props => {
             <Text
               style={[
                 font.Aquawax,
-                {fontSize: 40, padding: 20, paddingBottom: 10, color:'#333333'},
+                {
+                  fontSize: 40,
+                  padding: 20,
+                  paddingBottom: 10,
+                  color: '#333333',
+                },
               ]}>
               Daftar <Text style={styles.textWhite}>Pelajaran</Text>.
             </Text>
@@ -47,6 +52,28 @@ const teacherHome = props => {
                 borderWidth: 1,
               }}></View>
           </View>
+          {/* loop segini */}
+          <View
+            style={[
+              styles.boxWrappSearch,
+              styles.shadow,
+              styles.listMinMargin,
+              {
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+              },
+            ]}>
+            <TextInput
+              placeholder="Search ..."
+              style={{width: '90%'}}></TextInput>
+              <TouchableOpacity>
+            <Text style={{paddingVertical: 20}}>
+              <Icon name="search" size={23} style={styles.textBlack} />
+            </Text>
+            </TouchableOpacity>
+          </View>
+          {/* loop segini */}
           {/* loop segini */}
           <TouchableOpacity onPress={() => modalD(true)}>
             <View
@@ -107,7 +134,7 @@ const teacherHome = props => {
               width: '40%',
               height: '100%',
             }}
-            onPress={() => props.navigation.navigate('teacher-home')}>
+            onPress={() => props.navigation.navigate('teacher-live')}>
             <View>
               <Text style={styles.textStyle}>
                 <Icon name="street-view" size={23} style={styles.textBlack} />
@@ -198,7 +225,7 @@ const teacherHome = props => {
                 50 soal
               </Text>
               <Text style={{width: '40%', paddingTop: 10}}>
-                Siswa yang mengikuti test ini
+                Banyak siswa
               </Text>
               <Text style={{width: '10%', paddingTop: 10}}>:</Text>
               <Text style={{width: '50%', fontWeight: '700', paddingTop: 10}}>
@@ -233,7 +260,7 @@ const teacherHome = props => {
                         fontSize: 14,
                       },
                     ]}>
-                    Edit Soal
+                    Rubah Soal
                   </Text>
                 </View>
               </TouchableOpacity>
@@ -259,7 +286,7 @@ const teacherHome = props => {
                         fontSize: 14,
                       },
                     ]}>
-                    Delete Soal
+                    Hapus Pelajaran
                   </Text>
                 </View>
               </TouchableOpacity>
@@ -272,11 +299,8 @@ const teacherHome = props => {
               ]}>
               <Text style={{width: '40%'}}>Status </Text>
               <Text style={{width: '10%'}}>:</Text>
-              <Text style={{width: '50%', fontWeight: '700'}}>
-                Tidak Aktif
-              </Text>
-              <TouchableOpacity
-                style={{width: '100%'}}>
+              <Text style={{width: '50%', fontWeight: '700'}}>Tidak Aktif</Text>
+              <TouchableOpacity style={{width: '100%'}}>
                 <View
                   style={[
                     styles.boxSm,
@@ -395,7 +419,12 @@ const teacherHome = props => {
               <Text
                 style={[
                   font.Aquawax,
-                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10, color:'#333333'},
+                  {
+                    fontSize: 35,
+                    paddingHorizontal: 0,
+                    paddingBottom: 10,
+                    color: '#333333',
+                  },
                 ]}>
                 Tambah <Text style={styles.textWhite}>Pelajaran</Text>.
               </Text>
@@ -492,7 +521,12 @@ const teacherHome = props => {
               <Text
                 style={[
                   font.Aquawax,
-                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10, color:'#333333'},
+                  {
+                    fontSize: 35,
+                    paddingHorizontal: 0,
+                    paddingBottom: 10,
+                    color: '#333333',
+                  },
                 ]}>
                 Edit <Text style={styles.textWhite}>Pelajaran</Text>.
               </Text>
@@ -521,7 +555,12 @@ const teacherHome = props => {
               <Text
                 style={[
                   font.Aquawax,
-                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10, color:'#333333'},
+                  {
+                    fontSize: 35,
+                    paddingHorizontal: 0,
+                    paddingBottom: 10,
+                    color: '#333333',
+                  },
                 ]}>
                 Edit <Text style={styles.textWhite}>Soal</Text>.
               </Text>
@@ -698,7 +737,13 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* A */}
-                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
+                <View
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: '#999999',
+                    width: '100%',
+                  }}
+                />
                 {/* B */}
                 <Text
                   style={{
@@ -718,7 +763,13 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* B */}
-                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
+                <View
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: '#999999',
+                    width: '100%',
+                  }}
+                />
                 {/* C */}
                 <Text
                   style={{
@@ -738,7 +789,13 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* C */}
-                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
+                <View
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: '#999999',
+                    width: '100%',
+                  }}
+                />
                 {/* D */}
                 <Text
                   style={{
@@ -758,7 +815,13 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* D */}
-                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
+                <View
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: '#999999',
+                    width: '100%',
+                  }}
+                />
                 {/* E */}
                 <Text
                   style={{
@@ -779,7 +842,9 @@ const teacherHome = props => {
                 </TextInput>
                 {/* E */}
               </View>
-              <TouchableOpacity style={{width: '100%'}} onPress={() => modalES(false)}>
+              <TouchableOpacity
+                style={{width: '100%'}}
+                onPress={() => modalES(false)}>
                 <View
                   style={[
                     styles.boxSm,

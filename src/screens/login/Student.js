@@ -83,7 +83,7 @@ export default class Login extends React.Component {
         // react-native < 0.60 - ready to go!
       >
         <ImageBackground
-          source={require('../../../assets/img/bg5.jpg')}
+          source={require('../../../assets/img/bg1.jpg')}
           style={{width: '100%', height: '100%'}}>
           <View style={{flex: 1}}>
             <ScrollView>
@@ -180,7 +180,7 @@ export default class Login extends React.Component {
         <View style={{flex: 1, backgroundColor: '#000'}}>
           <ScrollView style={{backgroundColor: '#74A2A8'}}>
             <StatusBar backgroundColor="#060709" translucent={true} />
-            <KeyboardAvoidingView behavior="padding" style={styless.container}>
+            <KeyboardAvoidingView style={styless.container}>
               <View style={styless.loginScreenContainer}>
                 <View style={styless.loginFormView}>
                   <View style={styless.logoCon}>
@@ -213,7 +213,7 @@ export default class Login extends React.Component {
                   <TouchableOpacity
                     onPress={() =>
                       this.props.navigation.dispatch(
-                        StackActions.replace('navigator-teacher'),
+                        StackActions.replace('navigator-student'),
                       )
                     }>
                     <View style={[styless.loginButton]}>
@@ -229,14 +229,14 @@ export default class Login extends React.Component {
                   </TouchableOpacity>
 
                   <View style={styless.footer}>
-                    <Text style={styless.footerText}>Are you a student?</Text>
+                    <Text style={styless.footerText}>Belum memiliki akun?</Text>
                     <TouchableOpacity>
                       <Text
                         style={styless.registerButton}
                         onPress={() =>
-                          this.props.navigation.navigate('login-student')
+                          this.props.navigation.navigate('register-teacher')
                         }>
-                        Login here
+                        Daftar disini
                       </Text>
                     </TouchableOpacity>
                   </View>

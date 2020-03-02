@@ -107,6 +107,13 @@ export default {
     backgroundColor: '#fff',
     borderRadius: 5,
   },
+  boxWrappSearch: {
+    margin: 20,
+    marginBottom: 20,
+    paddingHorizontal: 20,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+  },
   boxWrappSm: {
     borderRadius: 5,
     width: '20%',
