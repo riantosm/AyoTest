@@ -15,8 +15,29 @@ export default {
   },
   logoCon: {
     alignItems: 'center',
-    marginTop: '50%',
+    marginTop: '40%',
     marginBottom: '30%',
+  },
+  logoConRegis: {
+    alignItems: 'center',
+    marginTop: '10%',
+    marginBottom: '10%',
+  },
+  profileImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    alignSelf: 'center',
+  },
+  shadow: {
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
   },
   logo: {
     width: 170,
@@ -35,7 +56,7 @@ export default {
     borderRadius: 5,
     backgroundColor: '#060709',
     width: '100%',
-    marginVertical: 10,
+    marginVertical: 20,
     paddingHorizontal: 20,
     fontSize: 20,
     textAlign: 'center',

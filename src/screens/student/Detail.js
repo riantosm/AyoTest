@@ -35,7 +35,7 @@ const studentHome = props => {
             <Text
               style={[
                 font.Aquawax,
-                {fontSize: 40, padding: 20, paddingBottom: 10},
+                {fontSize: 40, padding: 20, paddingTop: 40, paddingBottom: 10},
               ]}>
               Profile <Text style={styles.textGreen}>User</Text>.
             </Text>
@@ -168,7 +168,7 @@ const studentHome = props => {
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
-            <TouchableOpacity style={{margin:20}}>
+            <TouchableOpacity style={{margin: 20}}>
               <Image
                 style={styles.profileImage}
                 source={require('../../../assets/img/profile.jpg')}
@@ -181,28 +181,37 @@ const studentHome = props => {
             />
             <Text style={{fontSize: 18}}>Email</Text>
             <TextInput style={[styles.inputText]} placeholder="Masukan email" />
-            <Text style={{fontSize: 18}}>Nomor Hp</Text>
-            <TextInput style={[styles.inputText]} placeholder="Masukan nomor hp" />
             <Text style={{fontSize: 18}}>Alamat</Text>
             <TextInput
               style={[styles.inputText]}
               placeholder="Masukan alamat"
             />
-            <Text style={{fontSize: 18, paddingBottom:20}}>Jenis Kelamin</Text>
-              <RadioForm
-                radio_props={radio_props}
-                initial={0}
-                onPress={value => setAnswer(value)} 
-                buttonColor={'#0FB63F'}
-                borderColor={'#0FB63F'}
-                innerColor={'#0FB63F'}
-              />
+            <Text style={{fontSize: 18}}>Nomor Hp</Text>
+            <TextInput
+              style={[styles.inputText]}
+              placeholder="Masukan nomor hp"
+            />
+            <Text style={{fontSize: 18, paddingBottom: 20}}>Jenis Kelamin</Text>
+            <RadioForm
+              radio_props={radio_props}
+              initial={0}
+              onPress={value => setAnswer(value)}
+              buttonColor={'#0FB63F'}
+              borderColor={'#0FB63F'}
+              innerColor={'#0FB63F'}
+            />
           </ScrollView>
           <TouchableOpacity
             onPress={() => {
               modal(false);
             }}>
-            <View style={[styles.boxSm, styles.bgGreen, styles.shadow, {marginTop:20}]}>
+            <View
+              style={[
+                styles.boxSm,
+                styles.bgGreen,
+                styles.shadow,
+                {marginTop: 20},
+              ]}>
               <Text
                 style={[
                   font.Aquawax,

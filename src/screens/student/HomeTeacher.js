@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Modal,
   StatusBar,
+  Alert
 } from 'react-native';
 
 import font from '../Fonts';
@@ -233,6 +234,32 @@ const teacherHome = props => {
                       },
                     ]}>
                     Edit Soal
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  modalD(false);
+                }}
+                style={{width: '100%'}}>
+                <View
+                  style={[
+                    styles.boxSm,
+                    styles.bgBlack,
+                    styles.shadow,
+                    {marginTop: 20, width: '100%'},
+                  ]}>
+                  <Text
+                    style={[
+                      font.Aquawax,
+                      {
+                        color: '#fff',
+                        textAlign: 'center',
+                        textAlignVertical: 'center',
+                        fontSize: 14,
+                      },
+                    ]}>
+                    Delete Soal
                   </Text>
                 </View>
               </TouchableOpacity>
@@ -551,7 +578,6 @@ const teacherHome = props => {
             <TouchableOpacity
               onPress={() => {
                 modalA(false);
-                modalD(false);
                 modalE(false);
               }}
               style={{width: '100%'}}>
@@ -579,7 +605,6 @@ const teacherHome = props => {
             <TouchableOpacity
               onPress={() => {
                 modalA(false);
-                modalD(false);
                 modalE(false);
               }}>
               <View

@@ -32,6 +32,7 @@ const StudentTest = props => {
                 {
                   fontSize: 45,
                   padding: 20,
+                  paddingTop: 40,
                   paddingBottom: 10,
                   textAlign: 'center',
                 },
@@ -52,8 +53,8 @@ const StudentTest = props => {
             {/* <Text style={{fontWeight: '700'}}>Kode : </Text> */}
             <TextInput
               placeholder="kode"
-              placeholderTextColor="#CBDBEC"
-              style={[styles.inputText, styles.bgGreen, styles.textWhite, {textAlign: 'center'}]}
+              placeholderTextColor="gray"
+              style={[styles.inputText, styles.bgGrey, styles.textBlack, {textAlign: 'center'}]}
             />
             <TouchableOpacity onPress={() => modal(true)}>
               <View

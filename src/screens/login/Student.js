@@ -70,15 +70,15 @@ export default class Login extends React.Component {
     return (
       <ScrollView style={{backgroundColor: '#CBDBEC'}}>
         <StatusBar backgroundColor="#060709" translucent={true} />
-        <KeyboardAvoidingView behavior="padding" style={styless.container}>
+        <KeyboardAvoidingView style={styless.container}>
           <View style={styless.loginScreenContainer}>
             <View style={styless.loginFormView}>
               <View style={styless.logoCon}>
                 <Text style={[font.Aquawax, {fontSize: 65, color: '#060709'}]}>
                   ayo<Text style={{color: '#0FB63F'}}>test</Text>.
                 </Text>
-                <Text style={[font.Questriasl, {color: '#060709'}]}>
-                  Login for student.
+                <Text style={[{color: '#060709'}]}>
+                  Masuk sebagai siswa
                 </Text>
               </View>
               <TextInput
@@ -104,20 +104,20 @@ export default class Login extends React.Component {
                 <View style={[styless.loginButton]}>
                   <Text
                     style={{color: '#fff', textAlign: 'center', padding: 13}}>
-                    Login
+                    Masuk
                   </Text>
                 </View>
               </TouchableOpacity>
 
               <View style={styless.footer}>
-                <Text style={styless.footerText}>Are you a teacher?</Text>
+                <Text style={styless.footerText}>Belum memiliki akun?</Text>
                 <TouchableOpacity>
                   <Text
                     style={styless.registerButton}
                     onPress={() =>
-                      this.props.navigation.navigate('login-teacher')
+                      this.props.navigation.navigate('register-student')
                     }>
-                    Login here
+                    Daftar disini
                   </Text>
                 </TouchableOpacity>
               </View>
