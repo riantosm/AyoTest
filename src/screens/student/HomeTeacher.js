@@ -14,12 +14,18 @@ import font from '../Fonts';
 import styles from './StyleTeacher';
 import {TextInput} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import {
+  Collapse,
+  CollapseHeader,
+  CollapseBody,
+} from 'accordion-collapse-react-native';
 
 const teacherHome = props => {
   const [code, inputCode] = useState('');
   const [modalDetail, modalD] = useState(false);
   const [modalAdd, modalA] = useState(false);
   const [modalEdit, modalE] = useState(false);
+  const [modalEditSoal, modalES] = useState(false);
   return (
     <KeyboardAvoidingView style={styles.containerView}>
       <View style={[styles.MainContainer]}>
@@ -322,6 +328,11 @@ const teacherHome = props => {
                 placeholder="Masukan nama pelajaran"
                 style={styles.inputText}
               />
+              <Text style={{width: '40%'}}>Jumlah Soal </Text>
+              <TextInput
+                placeholder="Masukan jumlah soal"
+                style={styles.inputText}
+              />
 
               <TouchableOpacity
                 onPress={() => {
@@ -414,11 +425,6 @@ const teacherHome = props => {
                 placeholder="Masukan nama pelajaran"
                 style={styles.inputText}
               />
-              <Text style={{width: '40%'}}>Jumlah Soal </Text>
-              <TextInput
-                placeholder="Masukan jumlah soal"
-                style={styles.inputText}
-              />
             </View>
 
             <View style={{marginBottom: 20}}>
@@ -438,7 +444,8 @@ const teacherHome = props => {
                 }}></View>
             </View>
 
-            <TouchableOpacity>
+            {/* satu soal */}
+            <TouchableOpacity onPress={() => modalES(true)}>
               <View
                 style={[
                   styles.boxWrapp,
@@ -446,10 +453,12 @@ const teacherHome = props => {
                   {margin: 0, flexDirection: 'row', flexWrap: 'wrap'},
                 ]}>
                 <Text numberOfLines={1}>
-                  1. Apa yang dimaksud dengan warna warni pada ketika manusia{' '}
+                  1. Apa yang dimaksud dengan apa itu siapa dengan?
                 </Text>
               </View>
             </TouchableOpacity>
+            {/* satu soal */}
+
             <TouchableOpacity>
               <View
                 style={[
@@ -535,6 +544,176 @@ const teacherHome = props => {
         </View>
       </Modal>
       {/* modal Edit soal */}
+
+      {/* modal edit satu soal */}
+      <Modal
+        animationType="slide"
+        transparent={false}
+        visible={modalEditSoal}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+        }}>
+        <View style={[styles.wrapp, styles.containerView]}>
+          <ScrollView style={{height: '85%'}}>
+            <View>
+              <View
+                style={[
+                  styles.boxWrapp,
+                  styles.shadow,
+                  {
+                    margin: 0,
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    paddingHorizontal: 10,
+                    paddingVertical: 10,
+                  },
+                ]}>
+                <Text>Soal</Text>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={4}
+                  style={[styles.inputText, {paddingHorizontal: 10}]}>
+                  Apa yang dimaksud dengan apa itu siapa dengan?
+                </TextInput>
+              </View>
+            </View>
+            <View>
+              <View
+                style={[
+                  styles.boxWrapp,
+                  styles.shadow,
+                  {
+                    margin: 0,
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    paddingHorizontal: 10,
+                    paddingVertical: 10,
+                  },
+                ]}>
+                <Text style={{width: '100%'}}>Jawaban</Text>
+                {/* A */}
+                <Text
+                  style={{
+                    width: '10%',
+                    textAlignVertical: 'center',
+                    textAlign: 'center',
+                  }}>
+                  A.
+                </Text>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={1}
+                  style={[
+                    styles.inputText,
+                    {paddingHorizontal: 10, width: '90%'},
+                  ]}>
+                  Itu adalah ono
+                </TextInput>
+                {/* A */}
+                {/* B */}
+                <Text
+                  style={{
+                    width: '10%',
+                    textAlignVertical: 'center',
+                    textAlign: 'center',
+                  }}>
+                  B.
+                </Text>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={1}
+                  style={[
+                    styles.inputText,
+                    {paddingHorizontal: 10, width: '90%'},
+                  ]}>
+                  Itu adalah ono
+                </TextInput>
+                {/* B */}
+                {/* C */}
+                <Text
+                  style={{
+                    width: '10%',
+                    textAlignVertical: 'center',
+                    textAlign: 'center',
+                  }}>
+                  C.
+                </Text>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={1}
+                  style={[
+                    styles.inputText,
+                    {paddingHorizontal: 10, width: '90%'},
+                  ]}>
+                  Itu adalah ono
+                </TextInput>
+                {/* C */}
+                {/* D */}
+                <Text
+                  style={{
+                    width: '10%',
+                    textAlignVertical: 'center',
+                    textAlign: 'center',
+                  }}>
+                  D.
+                </Text>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={1}
+                  style={[
+                    styles.inputText,
+                    {paddingHorizontal: 10, width: '90%'},
+                  ]}>
+                  Itu adalah ono
+                </TextInput>
+                {/* D */}
+                {/* E */}
+                <Text
+                  style={{
+                    width: '10%',
+                    textAlignVertical: 'center',
+                    textAlign: 'center',
+                  }}>
+                  E.
+                </Text>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={1}
+                  style={[
+                    styles.inputText,
+                    {paddingHorizontal: 10, width: '90%'},
+                  ]}>
+                  Itu adalah ono
+                </TextInput>
+                {/* E */}
+              </View>
+              <TouchableOpacity style={{width: '100%'}} onPress={() => modalES(false)}>
+                <View
+                  style={[
+                    styles.boxSm,
+                    styles.bgBlack,
+                    styles.shadow,
+                    {marginTop: 0, width: '100%', marginBottom: 20},
+                  ]}>
+                  <Text
+                    style={[
+                      font.Aquawax,
+                      {
+                        color: '#fff',
+                        textAlign: 'center',
+                        textAlignVertical: 'center',
+                        fontSize: 14,
+                      },
+                    ]}>
+                    Simpan
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
+        </View>
+      </Modal>
+      {/* modal edit satu soal */}
     </KeyboardAvoidingView>
   );
 };
