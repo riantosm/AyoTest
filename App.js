@@ -103,7 +103,7 @@ class AppWithRedux extends React.Component {
               alignItems: 'center',
             }}>
             <Text style={[font.Aquawax, {fontSize: 65, color: '#060709'}]}>
-              ayo<Text style={{color: '#0FB63F'}}>test</Text>.
+              ayo<Text style={{color: '#0FB63F'}}>Test</Text>.
             </Text>
           </View>
         )}

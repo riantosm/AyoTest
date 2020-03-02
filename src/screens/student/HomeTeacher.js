@@ -35,7 +35,7 @@ const teacherHome = props => {
             <Text
               style={[
                 font.Aquawax,
-                {fontSize: 40, padding: 20, paddingBottom: 10},
+                {fontSize: 40, padding: 20, paddingBottom: 10, color:'#333333'},
               ]}>
               Daftar <Text style={styles.textWhite}>Pelajaran</Text>.
             </Text>
@@ -43,7 +43,7 @@ const teacherHome = props => {
               style={{
                 width: 50,
                 marginHorizontal: 20,
-                borderColor: '#000',
+                borderColor: '#333333',
                 borderWidth: 1,
               }}></View>
           </View>
@@ -139,7 +139,7 @@ const teacherHome = props => {
               width: '40%',
               height: '100%',
             }}
-            onPress={() => props.navigation.navigate('teacher-home')}>
+            onPress={() => props.navigation.navigate('teacher-detail')}>
             <View>
               <Text style={styles.textStyle}>
                 <Icon name="child" size={23} style={styles.textBlack} />
@@ -172,7 +172,7 @@ const teacherHome = props => {
                 style={{
                   width: 50,
                   marginHorizontal: 0,
-                  borderColor: '#000',
+                  borderColor: '#333333',
                   borderWidth: 1,
                 }}></View>
             </View>
@@ -311,7 +311,7 @@ const teacherHome = props => {
                     style={[
                       font.Aquawax,
                       {
-                        color: '#000',
+                        color: '#333333',
                         textAlign: 'center',
                         textAlignVertical: 'center',
                         fontSize: 14,
@@ -344,7 +344,7 @@ const teacherHome = props => {
                   style={[
                     font.Aquawax,
                     {
-                      color: '#000',
+                      color: '#333333',
                       textAlign: 'center',
                       textAlignVertical: 'center',
                       fontSize: 14,
@@ -395,7 +395,7 @@ const teacherHome = props => {
               <Text
                 style={[
                   font.Aquawax,
-                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10},
+                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10, color:'#333333'},
                 ]}>
                 Tambah <Text style={styles.textWhite}>Pelajaran</Text>.
               </Text>
@@ -403,7 +403,7 @@ const teacherHome = props => {
                 style={{
                   width: 50,
                   marginHorizontal: 0,
-                  borderColor: '#000',
+                  borderColor: '#333333',
                   borderWidth: 1,
                 }}></View>
             </View>
@@ -492,7 +492,7 @@ const teacherHome = props => {
               <Text
                 style={[
                   font.Aquawax,
-                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10},
+                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10, color:'#333333'},
                 ]}>
                 Edit <Text style={styles.textWhite}>Pelajaran</Text>.
               </Text>
@@ -500,7 +500,7 @@ const teacherHome = props => {
                 style={{
                   width: 50,
                   marginHorizontal: 0,
-                  borderColor: '#000',
+                  borderColor: '#333333',
                   borderWidth: 1,
                 }}></View>
             </View>
@@ -521,7 +521,7 @@ const teacherHome = props => {
               <Text
                 style={[
                   font.Aquawax,
-                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10},
+                  {fontSize: 35, paddingHorizontal: 0, paddingBottom: 10, color:'#333333'},
                 ]}>
                 Edit <Text style={styles.textWhite}>Soal</Text>.
               </Text>
@@ -529,7 +529,7 @@ const teacherHome = props => {
                 style={{
                   width: 50,
                   marginHorizontal: 0,
-                  borderColor: '#000',
+                  borderColor: '#333333',
                   borderWidth: 1,
                 }}></View>
             </View>
@@ -698,6 +698,7 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* A */}
+                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
                 {/* B */}
                 <Text
                   style={{
@@ -717,6 +718,7 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* B */}
+                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
                 {/* C */}
                 <Text
                   style={{
@@ -736,6 +738,7 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* C */}
+                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
                 {/* D */}
                 <Text
                   style={{
@@ -755,6 +758,7 @@ const teacherHome = props => {
                   Itu adalah ono
                 </TextInput>
                 {/* D */}
+                <View style={{borderBottomWidth:1, borderBottomColor:'#999999', width:'100%'}} />
                 {/* E */}
                 <Text
                   style={{

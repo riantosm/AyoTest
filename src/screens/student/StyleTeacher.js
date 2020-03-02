@@ -67,7 +67,7 @@ export default {
     backgroundColor: '#985bff',
   },
   bgBlack: {
-    backgroundColor: '#060709',
+    backgroundColor: '#333333',
   },
   bgWhite: {
     backgroundColor: '#fff',
@@ -82,7 +82,10 @@ export default {
     color: '#985bff',
   },
   textBlack: {
-    color: '#060709',
+    color: '#333333',
+  },
+  textBlack2: {
+    color: '#0d0d0d',
   },
   submit: {
     paddingVertical: 10,
@@ -129,15 +132,14 @@ export default {
     borderRadius: 5,
   },
   inputText: {
-    borderWidth: 1,
     borderColor: 'transparent',
     borderBottomColor: 'gray',
     width: '100%',
     paddingHorizontal: 20,
   },
   shadow: {
-    elevation: 5,
-    shadowColor: '#000',
+    elevation:4,
+    shadowColor: '#fff',
     shadowOffset: {
       width: 0,
       height: 12,
@@ -153,12 +155,11 @@ export default {
   },
   inputText: {
     borderRadius: 5,
-    backgroundColor: 'rgba(255,255,255,1)',
+    backgroundColor: 'rgba(255,255,255, .6)',
     width: '100%',
     marginVertical: 10,
     paddingHorizontal: 20,
     fontSize: 16,
-    borderWidth:1,
     borderColor:'grey'
   },
 };

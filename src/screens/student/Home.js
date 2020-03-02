@@ -94,7 +94,7 @@ const studentHome = props => {
                       <Text style={{width: '50%', fontWeight: '700'}}>
                         Aaron Bennet saaR erte
                       </Text>
-                      <Text style={{width: '45%'}}>Tanggal Mengikuti Test</Text>
+                      <Text style={{width: '45%'}}>Tanggal Test</Text>
                       <Text style={{width: '5%'}}>:</Text>
                       <Text style={{width: '50%', fontWeight: '700'}}>
                         02 April 2020
