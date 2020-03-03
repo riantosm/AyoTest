@@ -5,7 +5,7 @@ const {StyleSheet} = React;
 export default {
   containerView: {
     flex: 1,
-    backgroundColor: '#74A2A8',
+    backgroundColor: '#a1bfc4',
   },
 
   MainContainer: {

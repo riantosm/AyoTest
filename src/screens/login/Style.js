@@ -68,7 +68,7 @@ export default {
     flexDirection: 'row',
     textAlign: 'center',
     alignSelf: 'center',
-    marginTop: 20,
+    marginVertical: 20,
   },
   footerText: {
     fontSize: 14,

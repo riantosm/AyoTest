@@ -61,7 +61,7 @@ class AppWithRedux extends React.Component {
       <StatusBar backgroundColor="rgba(0,0,0, .5)" translucent={true} style={{position:'absolute'}} />
         {this.state.complete ? (
           <Stack.Navigator
-            initialRouteName="login-student"
+            initialRouteName="login"
             // initialRouteName={
             //   !this.state.login
             //     ? 'login'
@@ -70,6 +70,7 @@ class AppWithRedux extends React.Component {
             //     : 'student'
             // }
             headerMode="none">
+            <Stack.Screen name="login" component={Login} />
             <Stack.Screen name="login-student" component={LoginStudent} />
             <Stack.Screen name="register-student" component={RegisterStudent} />
             <Stack.Screen name="register-teacher" component={RegisterTeacher} />
