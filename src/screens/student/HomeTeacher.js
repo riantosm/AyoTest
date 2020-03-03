@@ -67,10 +67,10 @@ const teacherHome = props => {
             <TextInput
               placeholder="Search ..."
               style={{width: '90%'}}></TextInput>
-              <TouchableOpacity>
-            <Text style={{paddingVertical: 20}}>
-              <Icon name="search" size={23} style={styles.textBlack} />
-            </Text>
+            <TouchableOpacity>
+              <Text style={{paddingVertical: 20}}>
+                <Icon name="search" size={23} style={styles.textBlack} />
+              </Text>
             </TouchableOpacity>
           </View>
           {/* loop segini */}
@@ -224,9 +224,7 @@ const teacherHome = props => {
               <Text style={{width: '50%', paddingTop: 10, fontWeight: '700'}}>
                 50 soal
               </Text>
-              <Text style={{width: '40%', paddingTop: 10}}>
-                Banyak siswa
-              </Text>
+              <Text style={{width: '40%', paddingTop: 10}}>Banyak siswa</Text>
               <Text style={{width: '10%', paddingTop: 10}}>:</Text>
               <Text style={{width: '50%', fontWeight: '700', paddingTop: 10}}>
                 20 siswa
@@ -682,166 +680,166 @@ const teacherHome = props => {
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
-            <View>
+            {/* soalnya */}
+            <View
+              style={[
+                styles.boxWrapp,
+                styles.shadow,
+                {
+                  margin: 0,
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  paddingHorizontal: 10,
+                  paddingVertical: 10,
+                },
+              ]}>
+              <Text style={{fontWeight: '700'}}>Soal</Text>
+              <TextInput
+                multiline={true}
+                numberOfLines={5}
+                style={[styles.inputText, {paddingHorizontal: 10}]}>
+                Bagai mana cara membuat anak?
+              </TextInput>
+            </View>
+            {/* soalnya */}
+            <View
+              style={[
+                styles.boxWrapp,
+                styles.shadow,
+                {
+                  margin: 0,
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  paddingHorizontal: 10,
+                  paddingVertical: 10,
+                },
+              ]}>
+              <Text style={{fontWeight: '700', marginBottom: 20}}>Jawaban</Text>
+              {/* jawaban yang benar */}
               <View
                 style={[
-                  styles.boxWrapp,
+                  styles.boxWrappSearch,
                   styles.shadow,
+                  styles.listMinMargin,
                   {
-                    margin: 0,
                     flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    paddingHorizontal: 10,
-                    paddingVertical: 10,
+                    justifyContent: 'space-between',
                   },
                 ]}>
-                <Text>Soal</Text>
+                <Text style={{paddingVertical: 20}}>
+                  <Icon
+                    name="check-square"
+                    size={23}
+                    style={styles.textBlack}
+                  />
+                </Text>
                 <TextInput
-                  multiline={true}
-                  numberOfLines={4}
-                  style={[styles.inputText, {paddingHorizontal: 10}]}>
-                  Apa yang dimaksud dengan apa itu siapa dengan?
-                </TextInput>
+                  placeholder="Jawaban yang benar"
+                  style={{width: '90%'}}></TextInput>
               </View>
+              {/* jawaban yang benar */}
+
+              {/* jawaban yang salah */}
+              <View
+                style={[
+                  styles.boxWrappSearch,
+                  styles.shadow,
+                  styles.listMinMargin,
+                  {
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                  },
+                ]}>
+                <Text style={{paddingVertical: 20}}>
+                  <Icon
+                    name="window-close"
+                    size={21}
+                    style={styles.textBlack}
+                  />
+                </Text>
+                <TextInput
+                  placeholder="Jawaban yang salah"
+                  style={{width: '90%'}}></TextInput>
+              </View>
+              {/* jawaban yang salah */}
+
+              {/* jawaban yang salah */}
+              <View
+                style={[
+                  styles.boxWrappSearch,
+                  styles.shadow,
+                  styles.listMinMargin,
+                  {
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                  },
+                ]}>
+                <Text style={{paddingVertical: 20}}>
+                  <Icon
+                    name="window-close"
+                    size={21}
+                    style={styles.textBlack}
+                  />
+                </Text>
+                <TextInput
+                  placeholder="Jawaban yang salah"
+                  style={{width: '90%'}}></TextInput>
+              </View>
+              {/* jawaban yang salah */}
+
+              {/* jawaban yang salah */}
+              <View
+                style={[
+                  styles.boxWrappSearch,
+                  styles.shadow,
+                  styles.listMinMargin,
+                  {
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                  },
+                ]}>
+                <Text style={{paddingVertical: 20}}>
+                  <Icon
+                    name="window-close"
+                    size={21}
+                    style={styles.textBlack}
+                  />
+                </Text>
+                <TextInput
+                  placeholder="Jawaban yang salah"
+                  style={{width: '90%'}}></TextInput>
+              </View>
+              {/* jawaban yang salah */}
+
+              {/* jawaban yang salah */}
+              <View
+                style={[
+                  styles.boxWrappSearch,
+                  styles.shadow,
+                  styles.listMinMargin,
+                  {
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                  },
+                ]}>
+                <Text style={{paddingVertical: 20}}>
+                  <Icon
+                    name="window-close"
+                    size={21}
+                    style={styles.textBlack}
+                  />
+                </Text>
+                <TextInput
+                  placeholder="Jawaban yang salah"
+                  style={{width: '90%'}}></TextInput>
+              </View>
+              {/* jawaban yang salah */}
             </View>
             <View>
-              <View
-                style={[
-                  styles.boxWrapp,
-                  styles.shadow,
-                  {
-                    margin: 0,
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    paddingHorizontal: 10,
-                    paddingVertical: 10,
-                  },
-                ]}>
-                <Text style={{width: '100%'}}>Jawaban</Text>
-                {/* A */}
-                <Text
-                  style={{
-                    width: '10%',
-                    textAlignVertical: 'center',
-                    textAlign: 'center',
-                  }}>
-                  A.
-                </Text>
-                <TextInput
-                  multiline={true}
-                  numberOfLines={1}
-                  style={[
-                    styles.inputText,
-                    {paddingHorizontal: 10, width: '90%'},
-                  ]}>
-                  Itu adalah ono
-                </TextInput>
-                {/* A */}
-                <View
-                  style={{
-                    borderBottomWidth: 1,
-                    borderBottomColor: '#999999',
-                    width: '100%',
-                  }}
-                />
-                {/* B */}
-                <Text
-                  style={{
-                    width: '10%',
-                    textAlignVertical: 'center',
-                    textAlign: 'center',
-                  }}>
-                  B.
-                </Text>
-                <TextInput
-                  multiline={true}
-                  numberOfLines={1}
-                  style={[
-                    styles.inputText,
-                    {paddingHorizontal: 10, width: '90%'},
-                  ]}>
-                  Itu adalah ono
-                </TextInput>
-                {/* B */}
-                <View
-                  style={{
-                    borderBottomWidth: 1,
-                    borderBottomColor: '#999999',
-                    width: '100%',
-                  }}
-                />
-                {/* C */}
-                <Text
-                  style={{
-                    width: '10%',
-                    textAlignVertical: 'center',
-                    textAlign: 'center',
-                  }}>
-                  C.
-                </Text>
-                <TextInput
-                  multiline={true}
-                  numberOfLines={1}
-                  style={[
-                    styles.inputText,
-                    {paddingHorizontal: 10, width: '90%'},
-                  ]}>
-                  Itu adalah ono
-                </TextInput>
-                {/* C */}
-                <View
-                  style={{
-                    borderBottomWidth: 1,
-                    borderBottomColor: '#999999',
-                    width: '100%',
-                  }}
-                />
-                {/* D */}
-                <Text
-                  style={{
-                    width: '10%',
-                    textAlignVertical: 'center',
-                    textAlign: 'center',
-                  }}>
-                  D.
-                </Text>
-                <TextInput
-                  multiline={true}
-                  numberOfLines={1}
-                  style={[
-                    styles.inputText,
-                    {paddingHorizontal: 10, width: '90%'},
-                  ]}>
-                  Itu adalah ono
-                </TextInput>
-                {/* D */}
-                <View
-                  style={{
-                    borderBottomWidth: 1,
-                    borderBottomColor: '#999999',
-                    width: '100%',
-                  }}
-                />
-                {/* E */}
-                <Text
-                  style={{
-                    width: '10%',
-                    textAlignVertical: 'center',
-                    textAlign: 'center',
-                  }}>
-                  E.
-                </Text>
-                <TextInput
-                  multiline={true}
-                  numberOfLines={1}
-                  style={[
-                    styles.inputText,
-                    {paddingHorizontal: 10, width: '90%'},
-                  ]}>
-                  Itu adalah ono
-                </TextInput>
-                {/* E */}
-              </View>
               <TouchableOpacity
                 style={{width: '100%'}}
                 onPress={() => modalES(false)}>
