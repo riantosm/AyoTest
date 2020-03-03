@@ -200,6 +200,22 @@ const studentHome = props => {
               borderColor={'#0FB63F'}
               innerColor={'#0FB63F'}
             />
+            <Text style={{fontSize: 11, paddingTop:20}}>* Kosong kan jika tidak ingin merubah password</Text>
+            <Text style={{fontSize: 18}}>Password Lama</Text>
+            <TextInput
+              style={[styles.inputText]}
+              placeholder="Masukan nomor hp"
+            />
+            <Text style={{fontSize: 18}}>Password Baru</Text>
+            <TextInput
+              style={[styles.inputText]}
+              placeholder="Masukan nomor hp"
+            />
+            <Text style={{fontSize: 18}}>Konfirmasi Password Baru</Text>
+            <TextInput
+              style={[styles.inputText]}
+              placeholder="Masukan nomor hp"
+            />
           </ScrollView>
           <TouchableOpacity
             onPress={() => {

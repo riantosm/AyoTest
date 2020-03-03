@@ -183,7 +183,7 @@ const teacherHome = props => {
         transparent={false}
         visible={modalDetail}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
+          Alert.alert('Silakan tekan tombol kembali.');
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
@@ -411,7 +411,7 @@ const teacherHome = props => {
         transparent={false}
         visible={modalAdd}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
+          Alert.alert('Silakan tekan tombol kembali.');
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
@@ -513,7 +513,7 @@ const teacherHome = props => {
         transparent={false}
         visible={modalEdit}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
+          Alert.alert('Silakan tekan tombol kembali.');
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
@@ -678,7 +678,7 @@ const teacherHome = props => {
         transparent={false}
         visible={modalEditSoal}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
+          Alert.alert('Silakan tekan tombol kembali.');
         }}>
         <View style={[styles.wrapp, styles.containerView]}>
           <ScrollView style={{height: '85%'}}>
