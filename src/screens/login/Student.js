@@ -128,6 +128,32 @@ export default class Login extends React.Component {
                   </Text>
                 </TouchableOpacity>
               </View>
+
+              <View style={styless.footer}>
+                <Text style={styless.footerText}>Masuk sebagai guru?</Text>
+                <TouchableOpacity>
+                  <Text
+                    style={styless.registerButton}
+                    onPress={() =>
+                      this.props.navigation.navigate('register-student')
+                    }>
+                    Klik disini
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
+              <View style={styless.footer}>
+                <Text style={styless.footerText}>Lupa password?</Text>
+                <TouchableOpacity>
+                  <Text
+                    style={styless.registerButton}
+                    onPress={() =>
+                      this.props.navigation.navigate('forgot-password')
+                    }>
+                    Klik disini
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </KeyboardAvoidingView>

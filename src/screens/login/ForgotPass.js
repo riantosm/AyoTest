@@ -30,7 +30,7 @@ import styless from './Style';
 
 const url = 'http://3.85.4.188:3333/api/admin/login';
 
-export default class RegisterOtp extends React.Component {
+export default class ForgotPassword extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -77,39 +77,32 @@ export default class RegisterOtp extends React.Component {
 
   render() {
     return (
-      <ScrollView style={{backgroundColor: '#74A2A8'}}>
+      <ScrollView style={{backgroundColor: '#CBDBEC'}}>
         <StatusBar backgroundColor="#060709" translucent={true} />
         <KeyboardAvoidingView style={styless.container}>
           <View style={styless.loginScreenContainer}>
             <View style={styless.loginFormView}>
-              <View style={styless.logoConRegis}>
+              <View style={styless.logoCon}>
                 <Text style={[font.Aquawax, {fontSize: 65, color: '#060709'}]}>
-                  ayo<Text style={{color: '#CBDBEC'}}>test</Text>.
+                  ayo<Text style={{color: '#0FB63F'}}>test</Text>.
                 </Text>
-                <Text style={[{color: '#060709'}]}>Masuk sebagai guru</Text>
+                <Text style={[{color: '#060709'}]}>Rubah kata sandi anda</Text>
               </View>
 
-              <TouchableOpacity style={{margin: 20}}>
-                <Image
-                  style={styless.profileImage}
-                  source={require('../../../assets/img/profile.jpg')}
-                />
-              </TouchableOpacity>
               <Text style={{fontSize: 18, textAlign: 'center'}}>
-                Kode OTP (08987772233)
+                Masukan email anda.
               </Text>
               <TextInput
-                style={[styless.inputText]}
-                placeholder="Masukan kode OTP"
+                style={[styless.inputText, {textAlign: 'center'}]}
+                placeholder="Masukan email"
               />
               <Text
                 style={{
                   fontSize: 12,
                   textAlign: 'center',
-                  color: 'white',
                   paddingBottom: 20,
                 }}>
-                Kode tidak sama, ulangi!
+                Silakan cek email anda!
               </Text>
             </View>
             <TouchableOpacity>
