@@ -123,7 +123,7 @@ const studentHome = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-home')}>
-            <View>
+            <View style={styles.icoMenu}>
               <Text style={styles.textStyle}>
                 <Icon name="award" size={25} style={styles.textGreen} />
               </Text>
@@ -151,9 +151,9 @@ const studentHome = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-detail')}>
-            <View>
+            <View style={styles.circleIcon}>
               <Text style={styles.textStyle}>
-                <Icon name="child" size={25} style={styles.textGreen} />
+                <Icon name="user-alt" size={25} style={styles.textGreen} />
               </Text>
             </View>
           </TouchableOpacity>

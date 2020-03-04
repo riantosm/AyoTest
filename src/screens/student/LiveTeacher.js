@@ -9,6 +9,8 @@ import {
   Modal,
   Image,
 } from 'react-native';
+import axios from 'axios';
+import {useSelector} from 'react-redux';
 
 import font from '../Fonts';
 import styles from './StyleTeacher';
@@ -24,9 +26,28 @@ const radio_props = [
   {label: 'Laki - laki', value: 0},
   {label: 'Perempuan', value: 1},
 ];
+
 const teacherLive = props => {
   const [modalDelete, modal] = useState(false);
   const [answer, setAnswer] = useState(null);
+  const [name, setName] = useState('');
+  // const user = useSelector(state => state.user.user);
+
+  const handleSearch = () => {
+    // console.log(user);
+    axios
+      .get(`http://3.85.4.188:3333/api/score/search?name=${name}&id_user=1`)
+      .then(res => {
+        // setData(res.data.data);
+        // console.log(res.data.data);
+        console.warn(res.data.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    // console.log(name);
+  };
+
   return (
     <KeyboardAvoidingView style={styles.containerView}>
       <View style={[styles.MainContainer]}>
@@ -35,7 +56,13 @@ const teacherLive = props => {
             <Text
               style={[
                 font.Aquawax,
-                {fontSize: 40, padding: 20, paddingTop: 40, paddingBottom: 10, color:'#333333'},
+                {
+                  fontSize: 40,
+                  padding: 20,
+                  paddingTop: 40,
+                  paddingBottom: 10,
+                  color: '#333333',
+                },
               ]}>
               Live <Text style={styles.textWhite}>Score</Text>.
             </Text>
@@ -43,7 +70,7 @@ const teacherLive = props => {
               style={{
                 width: 50,
                 marginHorizontal: 20,
-                marginBottom:20,
+                marginBottom: 20,
                 borderColor: '#333333',
                 borderWidth: 1,
               }}></View>
@@ -61,11 +88,13 @@ const teacherLive = props => {
             ]}>
             <TextInput
               placeholder="Search ..."
-              style={{width: '90%'}}></TextInput>
-              <TouchableOpacity>
-            <Text style={{paddingVertical: 20}}>
-              <Icon name="search" size={23} style={styles.textBlack} />
-            </Text>
+              style={{width: '90%'}}
+              onChange={e => setName(e.nativeEvent.text)}
+            />
+            <TouchableOpacity onPress={() => handleSearch()}>
+              <Text style={{paddingVertical: 20}}>
+                <Icon name="search" size={23} style={styles.textBlack} />
+              </Text>
             </TouchableOpacity>
           </View>
           <View style={[styles.boxWrapp, styles.shadow]}>
@@ -95,7 +124,9 @@ const teacherLive = props => {
                 padding: 10,
               }}>
               <Text style={{width: '10%'}}>1</Text>
-              <Text style={{width: '70%'}} numberOfLines={1}>Bambang sudirman </Text>
+              <Text style={{width: '70%'}} numberOfLines={1}>
+                Bambang sudirman{' '}
+              </Text>
               <Text style={{width: '20%', textAlign: 'center'}}>80</Text>
             </View>
             {/* looping ini */}
@@ -112,7 +143,6 @@ const teacherLive = props => {
                 </Text>
               </View>
             </TouchableOpacity>
-            
           </View>
         </ScrollView>
         <View style={styles.bottomView}>
@@ -164,7 +194,6 @@ const teacherLive = props => {
           {/* profile teacher */}
         </View>
       </View>
-      
     </KeyboardAvoidingView>
   );
 };

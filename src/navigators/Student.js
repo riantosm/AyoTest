@@ -8,6 +8,7 @@ import StudentDetail from '../screens/student/Detail';
 import StudentFinish from '../screens/student/FinishScreen';
 import StudentAdd from '../screens/student/Add';
 import StudentStatistic from '../screens/student/Statistic';
+import Upgrade from '../screens/student/UpgradeScreen';
 
 import TeacherHome from '../screens/student/HomeTeacher';
 import TeacherDetail from '../screens/student/DetailTeacher';
@@ -22,6 +23,8 @@ const LoginNavigator = () => {
       <Stack.Screen name="teacher-home" component={TeacherHome} />
       <Stack.Screen name="teacher-detail" component={TeacherDetail} />
       <Stack.Screen name="teacher-live" component={teacherLive} />
+      
+      {/* <Stack.Screen name="upgrade" component={Upgrade} /> */}
 
       <Stack.Screen name="student-home" component={StudentHome} />
       <Stack.Screen name="student-test" component={StudentTest} />

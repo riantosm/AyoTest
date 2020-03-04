@@ -30,7 +30,7 @@ import styless from './Style';
 
 const url = 'http://3.85.4.188:3333/api/admin/login';
 
-export default class RegisterStudent extends React.Component {
+export default class RegisterOtp extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -77,16 +77,16 @@ export default class RegisterStudent extends React.Component {
 
   render() {
     return (
-      <ScrollView style={{backgroundColor: '#CBDBEC'}}>
+      <ScrollView style={{backgroundColor: '#74A2A8'}}>
         <StatusBar backgroundColor="#060709" translucent={true} />
         <KeyboardAvoidingView style={styless.container}>
           <View style={styless.loginScreenContainer}>
             <View style={styless.loginFormView}>
               <View style={styless.logoConRegis}>
                 <Text style={[font.Aquawax, {fontSize: 65, color: '#060709'}]}>
-                  ayo<Text style={{color: '#0FB63F'}}>test</Text>.
+                  ayo<Text style={{color: '#CBDBEC'}}>test</Text>.
                 </Text>
-                <Text style={[{color: '#060709'}]}>Daftar sebagai siswa</Text>
+                <Text style={[{color: '#060709'}]}>Daftar sebagai guru</Text>
               </View>
 
               <TouchableOpacity style={{margin: 20}}>
@@ -95,50 +95,24 @@ export default class RegisterStudent extends React.Component {
                   source={require('../../../assets/img/profile.jpg')}
                 />
               </TouchableOpacity>
-              <Text style={{fontSize: 18}}>Nama Lengkap</Text>
-              <TextInput
-                style={[styless.inputText]}
-                placeholder="Masukan nama lengkap"
-              />
-              <Text style={{fontSize: 18}}>Email</Text>
-              <TextInput
-                style={[styless.inputText]}
-                placeholder="Masukan email"
-              />
-              <Text style={{fontSize: 18}}>Alamat</Text>
-              <TextInput
-                style={[styless.inputText]}
-                placeholder="Masukan alamat"
-              />
-              <Text style={{fontSize: 18}}>Nomor Hp</Text>
-              <TextInput
-                style={[styless.inputText]}
-                placeholder="Masukan nomor hp"
-              />
-              <Text style={{fontSize: 18, paddingBottom: 10}}>
-                Jenis Kelamin
+              <Text style={{fontSize: 18, textAlign: 'center'}}>
+                Kode OTP (08987772233)
               </Text>
-              <RadioForm
-                radio_props={radio_props}
-                initial={0}
-                onPress={value => setAnswer(value)}
-                buttonColor={'#0FB63F'}
-                borderColor={'#0FB63F'}
-                innerColor={'#0FB63F'}
-              />
-              <Text style={{fontSize: 18, paddingTop: 10}}>Password</Text>
               <TextInput
                 style={[styless.inputText]}
-                placeholder="Masukan password"
+                placeholder="Masukan kode otp"
               />
-              <Text style={{fontSize: 18}}>Masukan Ulang Password</Text>
-              <TextInput
-                style={[styless.inputText]}
-                placeholder="Masukan ulang password"
-              />
+              <Text
+                style={{
+                  fontSize: 12,
+                  textAlign: 'center',
+                  color: 'white',
+                  paddingBottom: 20,
+                }}>
+                Kode tidak sama, ulangi!
+              </Text>
             </View>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('register-otp')}>
+            <TouchableOpacity>
               <View style={[styless.loginButton]}>
                 <Text style={{color: '#fff', textAlign: 'center', padding: 13}}>
                   Daftar

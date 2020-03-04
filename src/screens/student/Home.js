@@ -18,9 +18,12 @@ import {
   CollapseHeader,
   CollapseBody,
 } from 'accordion-collapse-react-native';
+import {useSelector} from 'react-redux'
 
 const studentHome = props => {
   const [code, inputCode] = useState('');
+  // const []
+
   return (
     <KeyboardAvoidingView style={styles.containerView}>
       <View style={[styles.MainContainer]}>
@@ -41,6 +44,26 @@ const studentHome = props => {
                 borderWidth: 1,
               }}></View>
           </View>
+          <View
+            style={[
+              styles.boxWrappSearch,
+              styles.shadow,
+              styles.listMinMargin,
+              {
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+              },
+            ]}>
+            <TextInput
+              placeholder="Search ..."
+              style={{width: '90%'}}></TextInput>
+            <TouchableOpacity>
+              <Text style={{paddingVertical: 20}}>
+                <Icon name="search" size={23} style={styles.textBlack} />
+              </Text>
+            </TouchableOpacity>
+          </View>
           <View style={[styles.boxWrapp, styles.shadow]}>
             {/* <Text style={{fontWeight:'700'}}>Data</Text> */}
             <View
@@ -53,10 +76,11 @@ const studentHome = props => {
               }}>
               <Text style={{width: '10%', fontWeight: '700'}}>#</Text>
               <Text style={{width: '70%', fontWeight: '700'}}>Nama Matkul</Text>
-              <Text
-                style={{width: '20%', fontWeight: '700', textAlign: 'center'}}>
-                Nilai
-              </Text>
+              <TouchableOpacity style={{width: '20%'}}>
+                <Text style={{textAlign: 'center', fontWeight: '700'}}>
+                  Nilai
+                </Text>
+              </TouchableOpacity>
             </View>
 
             {/* this */}
@@ -87,7 +111,11 @@ const studentHome = props => {
                         flexDirection: 'row',
                         flexWrap: 'wrap',
                         paddingVertical: 20,
-                        paddingHorizontal:10,
+                        paddingHorizontal: 10,
+                        borderWidth: 1,
+                        borderColor: 'gray',
+                        borderRadius: 5,
+                        marginVertical: 20,
                       }}>
                       <Text style={{width: '45%'}}>Nama Guru</Text>
                       <Text style={{width: '5%'}}>:</Text>
@@ -152,7 +180,9 @@ const studentHome = props => {
                 styles.shadow,
                 {width: 100, alignSelf: 'center'},
               ]}>
-              <Text style={{color: '#fff', textAlign: 'center'}}>Teacher home</Text>
+              <Text style={{color: '#fff', textAlign: 'center'}}>
+                Teacher home
+              </Text>
             </View>
           </TouchableOpacity>
         </ScrollView>
@@ -164,7 +194,7 @@ const studentHome = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-home')}>
-            <View>
+            <View style={styles.icoMenu}>
               <Text style={styles.textStyle}>
                 <Icon name="award" size={25} style={styles.textGreen} />
               </Text>
@@ -192,9 +222,9 @@ const studentHome = props => {
               height: '100%',
             }}
             onPress={() => props.navigation.navigate('student-detail')}>
-            <View>
+            <View style={styles.circleIcon}>
               <Text style={styles.textStyle}>
-                <Icon name="child" size={25} style={styles.textGreen} />
+                <Icon name="user-alt" size={25} style={styles.textGreen} />
               </Text>
             </View>
           </TouchableOpacity>

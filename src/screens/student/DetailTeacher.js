@@ -68,6 +68,20 @@ const teacherDetail = props => {
                 </Text>
               </View>
             </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('upgrade')}>
+              <View
+                style={[
+                  styles.submit,
+                  styles.bgBlack,
+                  styles.shadow,
+                  {marginTop: 20, width: '100%', alignSelf: 'center'},
+                ]}>
+                <Text style={{color: '#fff', textAlign: 'center'}}>
+                  Upgrade
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
           <View style={{padding: 20}}>
             <TouchableOpacity

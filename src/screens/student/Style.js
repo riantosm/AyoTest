@@ -55,9 +55,13 @@ export default {
     alignItems: 'center',
     justifyContent: 'center',
   },
+  icoMenu:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexGrow: 1,
+  },
   textStyle: {
     textAlign: 'center',
-    padding: 11,
     color: 'green',
   },
   bgGreen: {
@@ -103,6 +107,16 @@ export default {
     padding: 20,
     backgroundColor: '#fff',
     borderRadius: 5,
+  },
+  boxWrappSearch: {
+    margin: 20,
+    marginTop: 20,
+    paddingHorizontal: 20,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+  },
+  listMinMargin:{
+    marginVertical:5
   },
   boxWrappSm: {
     borderRadius: 5,
